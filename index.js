@@ -4,12 +4,13 @@ import inquirer from "inquirer";
 // user input for guessing number
 // compare user input with generated number
 const randomNumber = Math.floor(Math.random() * 6 + 1);
+console.log("Welcome to number guessing game");
 const answer = await inquirer.prompt([
     {
         name: "userGuessedNumber",
         type: "number",
-        message: "please guess a number between 1 to 6:"
-    }
+        message: "please guess a number between 1 to 6:",
+    },
 ]);
 if (answer.userGuessedNumber === randomNumber) {
     console.log("congratulation! you guessed the right number.");
